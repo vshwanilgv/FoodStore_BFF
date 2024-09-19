@@ -1,0 +1,69 @@
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-11T20:20:46.190Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-11T20:21:46.545Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-11T20:21:47.468Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-11T20:21:47.813Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-11T20:21:48.185Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-11T20:21:48.794Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T20:34:13.222Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T20:34:49.473Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T20:36:27.219Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T20:36:27.642Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T20:36:28.331Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T20:36:58.859Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T20:36:59.308Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T20:36:59.666Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T20:40:34.737Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T20:40:35.960Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T20:40:36.391Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T20:40:36.785Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T20:40:37.682Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T20:40:40.906Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T20:40:43.140Z"}
+{"level":"error","message":"Error fetching product by ID: 2 - Request failed with status code 500","timestamp":"2024-09-11T21:20:26.684Z"}
+{"level":"error","message":"Error fetching product by ID: 2 - Request failed with status code 500","timestamp":"2024-09-11T21:20:28.481Z"}
+{"level":"error","message":"Error fetching product by ID: 2 - Request failed with status code 500","timestamp":"2024-09-11T21:20:28.682Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T21:27:01.719Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T21:27:15.088Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T21:27:19.075Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T21:27:25.077Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T21:27:32.075Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T21:27:33.708Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T21:27:34.897Z"}
+{"level":"error","message":"Error fetching product by ID: undefined - Request failed with status code 400","timestamp":"2024-09-11T21:28:15.213Z"}
+{"level":"error","message":"Error fetching products: Request failed with status code 500","timestamp":"2024-09-12T07:29:24.896Z"}
+{"level":"error","message":"Error fetching products: Request failed with status code 500","timestamp":"2024-09-12T07:29:36.687Z"}
+{"level":"error","message":"Error fetching products: Request failed with status code 500","timestamp":"2024-09-12T07:29:40.677Z"}
+{"level":"error","message":"Error fetching products: Request failed with status code 500","timestamp":"2024-09-12T07:30:00.680Z"}
+{"level":"error","message":"Error creating product: Request failed with status code 415","timestamp":"2024-09-12T07:30:31.541Z"}
+{"level":"error","message":"Error creating product: Request failed with status code 415","timestamp":"2024-09-12T07:30:32.190Z"}
+{"level":"error","message":"Error fetching products: Request failed with status code 500","timestamp":"2024-09-12T07:30:36.949Z"}
+{"level":"error","message":"Error fetching products: Request failed with status code 500","timestamp":"2024-09-12T07:30:40.673Z"}
+{"level":"error","message":"Error fetching products: Request failed with status code 500","timestamp":"2024-09-12T07:31:10.714Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-12T07:52:46.595Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-12T10:27:32.767Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-12T10:27:34.517Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-12T10:28:03.535Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-12T10:28:04.067Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-12T10:28:04.864Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-12T10:28:07.172Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-12T10:28:08.690Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-12T10:28:09.670Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-12T10:28:10.082Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-12T10:28:10.577Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-12T10:28:11.537Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-12T10:28:12.630Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-12T10:28:15.322Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-12T10:28:16.425Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-12T10:28:17.028Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-09-12T10:28:17.368Z"}
+{"level":"error","message":"Error fetching products: Request failed with status code 500","timestamp":"2024-09-12T11:23:15.123Z"}
+{"level":"error","message":"Error fetching products: Request failed with status code 500","timestamp":"2024-09-12T11:25:21.995Z"}
+{"level":"error","message":"Error fetching products: Request failed with status code 500","timestamp":"2024-09-12T11:25:29.416Z"}
+{"level":"error","message":"Error fetching products: Request failed with status code 500","timestamp":"2024-09-12T11:25:29.965Z"}
+{"level":"error","message":"Error fetching products: Request failed with status code 500","timestamp":"2024-09-12T11:25:38.945Z"}
+{"level":"error","message":"Error fetching products: Request failed with status code 500","timestamp":"2024-09-12T11:25:39.311Z"}
+{"level":"error","message":"Error fetching products: Request failed with status code 500","timestamp":"2024-09-12T11:25:56.368Z"}
+{"level":"error","message":"Error fetching products: Request failed with status code 500","timestamp":"2024-09-12T11:25:58.777Z"}
+{"level":"error","message":"Error fetching products: socket hang up","timestamp":"2024-09-12T11:26:18.775Z"}
+{"level":"error","message":"Error fetching product by ID: 1 - socket hang up","timestamp":"2024-09-12T11:26:18.784Z"}
+{"level":"error","message":"Error fetching products: read ECONNRESET","timestamp":"2024-09-12T11:26:18.800Z"}

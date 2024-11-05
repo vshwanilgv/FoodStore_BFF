@@ -1,5 +1,5 @@
 const axios = require('axios');
-const BASE_URL ="http://localhost:8080/api/v1/products";
+const BASE_URL ="http://localhost:8081/api/v1/products";
 const logger = require('../utils/logger')
 const FormData = require('form-data');
 const fs = require('fs');

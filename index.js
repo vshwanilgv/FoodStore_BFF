@@ -1,8 +1,12 @@
 const express = require('express');
 const cors = require('cors');
+const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const productRoutes = require('./src/routes/productRoutes');
+const axios = require('axios');
+const userRoutes = require('./src/routes/userRoutes');
 
+dotenv.config();
 const corsOptions = {
     origin: (origin, callback) => {
         if (!origin) return callback(null, true);
@@ -18,7 +22,7 @@ const corsOptions = {
 
 const app = express();
 
-const allowedOrigins = ['http://localhost:3000'];
+const allowedOrigins = ['http://localhost:9000'];
 
 app.use(cors(corsOptions));
 app.options('*', cors(corsOptions)); 
@@ -27,6 +31,7 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use('/api/products', productRoutes);
+app.use('/api/users', userRoutes);
 
 
 app.use((err, req, res, next) => {

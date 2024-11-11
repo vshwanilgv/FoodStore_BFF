@@ -1,5 +1,5 @@
 const axios = require('axios');
-const BASE_URL = "http://localhost:8081/api/v1/users"; 
+const BASE_URL = "http://localhost:8080/api/v1/users"; 
 const logger = require('../utils/logger');
 const FormData = require('form-data');
 const { signUpUser, signInUser } = require('../services/cognitoService');
@@ -8,10 +8,10 @@ const fs = require('fs');
 
 
 exports.signUp = async (req, res) => {
-    const { email, password } = req.body;
+    const { username, email, password } = req.body;
   
     try {
-      const user = await signUpUser(email, password);
+      const user = await signUpUser(username, email, password);
       res.status(201).json({ message: 'User registered successfully', user });
     } catch (error) {
       res.status(500).json({ message: 'Failed to sign up', error: error.message });
@@ -19,11 +19,14 @@ exports.signUp = async (req, res) => {
   };
 
 exports.signIn = async (req, res) => {
-    const { email, password } = req.body;
+    const { username, email, password } = req.body;
+
+    
   
     try {
-      const tokens = await signInUser(email, password);
+      const tokens = await signInUser(username, email, password);
       res.status(200).json(tokens);
+      
     } catch (error) {
       res.status(401).json({ message: 'Invalid credentials', error: error.message });
     }

@@ -8,20 +8,27 @@ const poolData = {
 };
 const userPool = new CognitoUserPool(poolData);
 
-// Sign up a new user
-const signUpUser = (email, password) => {
-  return new Promise((resolve, reject) => {
-    userPool.signUp(email, password, [], null, (err, result) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(result.user);
-      }
-    });
-  });
+const cognito = new AWS.CognitoIdentityServiceProvider();
+
+const signUpUser = async(email, password,username, clientId) => {
+  attributes={ClientId:"7ngdf3st3c2d0g366e8c3otlup", username,         Password: password,        UserAttributes: [ { Name: 'email', Value: email } ]}
+
+  const res = await cognito.signup(attributes).promise();
+  console.log(res);
+  console.log(username, email, password);
+  // return new Promise((resolve, reject) => {
+        
+  //      cognito.signUp(attributes, (err, data) => {
+  //       const response = {
+  //         error: err,
+  //         data: data,
+  //       };
+  //       console.log(response);
+  //     });
+  // });
 };
 
-// Sign in an existing user
+
 const signInUser = (email, password) => {
   return new Promise((resolve, reject) => {
     const authenticationDetails = new AuthenticationDetails({
@@ -47,7 +54,7 @@ const signInUser = (email, password) => {
   });
 };
 
-// Validate JWT token
+
 const validateToken = (token) => {
   return new Promise((resolve, reject) => {
     AWS.config.region = process.env.COGNITO_REGION;

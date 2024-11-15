@@ -3,8 +3,10 @@ const BASE_URL = "http://localhost:8080/api/v1/users";
 const logger = require('../utils/logger');
 const FormData = require('form-data');
 const { signUp } = require('../utils/cognitoUtils');
-
+const { confirmSignUp } = require('../utils/cognitoUtils');
+const { signIn } = require('../utils/cognitoUtils');
 const fs = require('fs');
+const e = require('express');
 
 
 exports.signUp = async (req, res) => {
@@ -50,30 +52,55 @@ exports.confirmSignUp = async(req,res) => {
     if (!email || !code) {
         return res.status(400).json({ error: "Email and verification code are required" });
     }
+    if (typeof code !== "number" || code.toString().length !== 6) { 
+        return res.status(400).json({ error: "Invalid verification code format." });
+    }
     try {
-        // Call Cognito to confirm the user's signup
         await confirmSignUp(email, code);
+        const backendResponse = await axios.put(`${BASE_URL}/verify`, 
+            email,
+            {
+                params: { email }, // Include email as a query parameter
+            }
+        );
 
-        // Update the backend to mark the user as verified
-        await axios.put(`${BASE_URL}`, { email,isVerified: true });
-
-        res.status(200).json({ message: "User verified successfully" });
+        res.status(200).json({
+            message: "User verified successfully",
+            backendResponse: backendResponse.data, // Include backend response for debugging
+        });
     } catch (error) {
         console.error("Error verifying user:", error.message);
-        res.status(400).json({ error: "Verification failed" });
+        const errorMessage =
+            error.response?.data?.error ||
+            (error.code === "CodeMismatchException" ? "Invalid verification code." :
+            error.code === "ExpiredCodeException" ? "Verification code expired." :
+            "Verification failed.");
+
+        res.status(400).json({ error: errorMessage });
     }
 
 }
 
 exports.signIn = async (req, res) => {
-    const { username, email, password } = req.body;
+    const { email, password,username } = req.body;
 
-    
+    if (!email || !password || !username) {
+        return res.status(400).json({ error: "Email username and password  are required." });
+    }
+
   
     try {
-      const tokens = await signInUser(username, email, password);
-      res.status(200).json(tokens);
-      
+
+        const tokens = await signIn(email, password,username);
+
+    // Return tokens to the frontend
+    res.status(200).json({
+        message: "Login successful",
+        accessToken: tokens.AccessToken,
+        idToken: tokens.IdToken,
+        refreshToken: tokens.RefreshToken,
+    });
+    
     } catch (error) {
       res.status(401).json({ message: 'Invalid credentials', error: error.message });
     }

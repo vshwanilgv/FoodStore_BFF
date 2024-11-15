@@ -25,6 +25,21 @@ async function confirmSignUp(username, code) {
     return cognito.confirmSignUp(params).promise();
 }
 
+async function signIn(email, password, username) {
+    const params = {
+        AuthFlow: 'USER_PASSWORD_AUTH',
+    
+        ClientId: clientId,
+        AuthParameters: {
+            USERNAME: username,
+            Email: email,
+            PASSWORD: password,
+        },
+    };
+    return cognito.initiateAuth(params).promise();
+    return response.AuthenticationResult;
+}
 
 
-module.exports = { signUp, confirmSignUp };
+
+module.exports = { signUp, confirmSignUp ,signIn};

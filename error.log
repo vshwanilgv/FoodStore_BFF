@@ -200,3 +200,7 @@
 {"level":"error","message":"Error fetching user by ID: signup - Request failed with status code 400","timestamp":"2024-11-12T19:05:57.145Z"}
 {"level":"error","message":"Error creating user: Cannot destructure property 'userGroup' of 'req.user' as it is undefined.","timestamp":"2024-11-12T19:41:35.041Z"}
 {"level":"error","message":"Error creating user: Cannot destructure property 'userGroup' of 'req.user' as it is undefined.","timestamp":"2024-11-12T19:41:44.532Z"}
+{"level":"error","message":"Error updating user by ID: lconfirm - Cannot read properties of undefined (reading 'name')","timestamp":"2024-11-15T14:53:48.358Z"}
+{"level":"error","message":"Error updating user by ID: lconfirm - Cannot read properties of undefined (reading 'name')","timestamp":"2024-11-15T14:54:02.225Z"}
+{"level":"error","message":"Error updating user by ID: confirm - Cannot read properties of undefined (reading 'name')","timestamp":"2024-11-15T14:54:10.898Z"}
+{"level":"error","message":"Error updating user by ID: confirm - Cannot read properties of undefined (reading 'name')","timestamp":"2024-11-15T14:54:14.451Z"}

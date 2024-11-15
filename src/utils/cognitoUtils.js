@@ -16,4 +16,15 @@ async function signUp(username, password, attributes) {
     return cognito.signUp(params).promise();
 }
 
-module.exports = { signUp };
+async function confirmSignUp(username, code) {
+    const params = {
+        ClientId: clientId,
+        Username: username,
+        ConfirmationCode: code,
+    };
+    return cognito.confirmSignUp(params).promise();
+}
+
+
+
+module.exports = { signUp, confirmSignUp };

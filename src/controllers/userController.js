@@ -45,6 +45,26 @@ exports.signUp = async (req, res) => {
     }
   };
 
+exports.confirmSignUp = async(req,res) => {
+    const { email, code } = req.body;
+    if (!email || !code) {
+        return res.status(400).json({ error: "Email and verification code are required" });
+    }
+    try {
+        // Call Cognito to confirm the user's signup
+        await confirmSignUp(email, code);
+
+        // Update the backend to mark the user as verified
+        await axios.put(`${BASE_URL}`, { email,isVerified: true });
+
+        res.status(200).json({ message: "User verified successfully" });
+    } catch (error) {
+        console.error("Error verifying user:", error.message);
+        res.status(400).json({ error: "Verification failed" });
+    }
+
+}
+
 exports.signIn = async (req, res) => {
     const { username, email, password } = req.body;
 
@@ -61,7 +81,7 @@ exports.signIn = async (req, res) => {
 
 exports.getAllUsers = async (req, res, next) => {
     try {
-        const response = await axios.get(`${BASE_URL}`);
+        const response = await axios.get(`${BASE_URL}/verify`);
         res.json(response.data);
     } catch (error) {
         logger.error(`Error fetching users: ${error.message}`);

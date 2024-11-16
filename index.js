@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const productRoutes = require('./src/routes/productRoutes');
 const axios = require('axios');
 const userRoutes = require('./src/routes/userRoutes');
+const cartRoutes = require('./src/routes/cartRoutes');
 
 dotenv.config();
 const corsOptions = {
@@ -32,7 +33,7 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
-
+app.use('/api/cart', cartRoutes);
 
 app.use((err, req, res, next) => {
     console.error(`Error: ${err.message}`);

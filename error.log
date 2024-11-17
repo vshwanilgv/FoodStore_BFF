@@ -204,3 +204,7 @@
 {"level":"error","message":"Error updating user by ID: lconfirm - Cannot read properties of undefined (reading 'name')","timestamp":"2024-11-15T14:54:02.225Z"}
 {"level":"error","message":"Error updating user by ID: confirm - Cannot read properties of undefined (reading 'name')","timestamp":"2024-11-15T14:54:10.898Z"}
 {"level":"error","message":"Error updating user by ID: confirm - Cannot read properties of undefined (reading 'name')","timestamp":"2024-11-15T14:54:14.451Z"}
+{"level":"error","message":"Error creating cart: ","timestamp":"2024-11-17T14:59:21.788Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-11-17T15:02:04.429Z"}
+{"level":"error","message":"Error fetching users: ","timestamp":"2024-11-17T15:02:56.258Z"}
+{"level":"error","message":"Error fetching products: ","timestamp":"2024-11-17T15:09:33.469Z"}

@@ -33,7 +33,7 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
-app.use('/api/cart', cartRoutes);
+app.use('/api/carts', cartRoutes);
 
 app.use((err, req, res, next) => {
     console.error(`Error: ${err.message}`);

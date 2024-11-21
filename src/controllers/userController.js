@@ -7,7 +7,7 @@ const { confirmSignUp } = require('../utils/cognitoUtils');
 const { signIn } = require('../utils/cognitoUtils');
 const fs = require('fs');
 const e = require('express');
-
+const jwt = require('jsonwebtoken');
 
 exports.signUp = async (req, res) => {
     const { username, email, password } = req.body;
@@ -92,13 +92,35 @@ exports.signIn = async (req, res) => {
     try {
 
         const tokens = await signIn(email, password,username);
+        console.log("Tokens:", tokens);
+       // Validate IdToken
+       if (!tokens || !tokens.IdToken) {
+        return res.status(401).json({ message: "Invalid credentials, token not generated." });
+    }
 
-    // Return tokens to the frontend
+    const idToken = tokens.IdToken;
+    const decoded = jwt.decode(idToken);
+
+    // Validate decoded token
+    if (!decoded || !decoded.sub) {
+        return res.status(400).json({ error: "Invalid token format, 'sub' not found." });
+    }
+
+    const cognitoId = decoded.sub;
+    console.log("Cognito ID:", cognitoId);
+
+    const response = await axios.get(`${BASE_URL}/cognito/${cognitoId}`);
+    
+
+
     res.status(200).json({
         message: "Login successful",
+        cognitoId,
+        userId:response.data.userId,
         accessToken: tokens.AccessToken,
         idToken: tokens.IdToken,
         refreshToken: tokens.RefreshToken,
+
     });
     
     } catch (error) {

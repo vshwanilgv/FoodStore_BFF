@@ -42,9 +42,10 @@ exports.getCartById = async (req, res, next) => {
 
 
 exports.getCartByUserId = async (req, res, next) => {
-  try {
-    const { userId } = req.params;
+  const { userId } = req.params;
 
+  try {
+   
     const response = await axios.get(`${BASE_URL}/user/${userId}`);
     res.status(200).json(response.data);
   } catch (error) {

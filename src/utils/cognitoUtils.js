@@ -36,8 +36,15 @@ async function signIn(email, password, username) {
             PASSWORD: password,
         },
     };
-    return cognito.initiateAuth(params).promise();
-    return response.AuthenticationResult;
+    return new Promise((resolve, reject) => {
+        cognito.initiateAuth(params, (err, data) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(data.AuthenticationResult);
+            }
+        });
+    });
 }
 
 
